@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Testimonials - VSP Visa Consultant Consultants</title>
+    <meta
+      name="description"
+      content="Read success stories and testimonials from our satisfied clients who achieved their immigration goals with VSP Visa Consultant Consultants."
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+      function animateNumberCounters(
+        selector = ".number-counter",
+        duration = 2
+      ) {
+        // Register ScrollTrigger if available
+        if (
+          typeof gsap !== "undefined" &&
+          typeof ScrollTrigger !== "undefined"
+        ) {
+          gsap.registerPlugin(ScrollTrigger);
+
+          document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(selector);
+
+            counters.forEach((counter) => {
+              // Get target number (support for "+" suffix)
+              const text = counter.textContent.trim();
+              const hasPlus = text.includes("+");
+              const targetNumber =
+                parseFloat(text.replace(/[^0-9.]/g, "")) || 0;
+              const decimalPlaces = (
+                targetNumber.toString().split(".")[1] || []
+              ).length;
+
+              // Set initial value
+              counter.textContent = "0".repeat(
+                decimalPlaces ? decimalPlaces + 1 : 1
+              );
+
+              // Create animation
+              gsap.to(counter, {
+                innerText: targetNumber,
+                duration: duration,
+                ease: "power1.out",
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                  trigger: counter,
+                  start: "top 80%",
+                  toggleActions: "play none none none",
+                },
+                onUpdate: function () {
+                  // Handle formatting
+                  const value = parseFloat(counter.innerText);
+                  if (decimalPlaces > 0) {
+                    counter.textContent = value.toFixed(decimalPlaces);
+                  } else {
+                    counter.textContent = Math.round(value);
+                  }
+
+                  // Add plus sign if needed
+                  if (hasPlus && value >= targetNumber) {
+                    counter.textContent += "+";
+                  }
+                },
+              });
+            });
+          });
+        }
+      }
+
+      // Initialize with default options
+      animateNumberCounters();
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img src="/images/logo.jpg" height="45" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <!-- Company Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="company.html"
+                id="companyDropdown"
+                role="button"
+              >
+                Company
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">About Us</h6>
+                      <a class="dropdown-item" href="company.html#about"
+                        >Our Story</a
+                      >
+                      <a class="dropdown-item" href="company.html#mission"
+                        >Mission & Vision</a
+                      >
+                      <a class="dropdown-item" href="company.html#values"
+                        >Our Values</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Team</h6>
+                      <a class="dropdown-item" href="company.html#team"
+                        >Our Experts</a
+                      >
+                      <a class="dropdown-item" href="company.html#advisors"
+                        >Advisory Board</a
+                      >
+                      <a class="dropdown-item" href="company.html#careers"
+                        >Careers</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Recognition</h6>
+                      <a class="dropdown-item" href="company.html#awards"
+                        >Awards</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="company.html#certifications"
+                        >Certifications</a
+                      >
+                      <a class="dropdown-item" href="company.html#partnerships"
+                        >Partnerships</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Immigration</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#permanent-residence"
+                        >Permanent Residence</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#family-sponsorship"
+                        >Family Sponsorship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#express-entry"
+                        >Express Entry</a
+                      >
+                      <a class="dropdown-item" href="services.html#pnp"
+                        >Provincial Nominee</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Study Abroad</h6>
+                      <a class="dropdown-item" href="services.html#student-visa"
+                        >Student Visa</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#university-admission"
+                        >University Admission</a
+                      >
+                      <a class="dropdown-item" href="services.html#scholarship"
+                        >Scholarship Guidance</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#post-graduation"
+                        >Post-Graduation Work</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Work Permits</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#temporary-work"
+                        >Temporary Work Permit</a
+                      >
+                      <a class="dropdown-item" href="services.html#lmia"
+                        >LMIA Services</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#intra-company"
+                        >Intra-Company Transfer</a
+                      >
+                      <a class="dropdown-item" href="services.html#startup-visa"
+                        >Startup Visa</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Other Services</h6>
+                      <a class="dropdown-item" href="services.html#visitor-visa"
+                        >Visitor Visa</a
+                      >
+                      <a class="dropdown-item" href="services.html#citizenship"
+                        >Citizenship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#document-preparation"
+                        >Document Preparation</a
+                      >
+                      <a class="dropdown-item" href="services.html#consultation"
+                        >Free Consultation</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="testimonials.html"
+                >Testimonials</a
+              >
+            </li>
+
+            <!-- Blog Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="blog.html"
+                id="blogDropdown"
+                role="button"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Immigration News</h6>
+                      <a class="dropdown-item" href="blog.html#policy-updates"
+                        >Policy Updates</a
+                      >
+                      <a class="dropdown-item" href="blog.html#new-programs"
+                        >New Programs</a
+                      >
+                      <a class="dropdown-item" href="blog.html#processing-times"
+                        >Processing Times</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Guides & Tips</h6>
+                      <a class="dropdown-item" href="blog.html#application-tips"
+                        >Application Tips</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#document-checklist"
+                        >Document Checklist</a
+                      >
+                      <a class="dropdown-item" href="blog.html#interview-prep"
+                        >Interview Preparation</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Success Stories</h6>
+                      <a class="dropdown-item" href="blog.html#case-studies"
+                        >Case Studies</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#client-experiences"
+                        >Client Experiences</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#video-testimonials"
+                        >Video Testimonials</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+      <div class="banner-image">
+        <img
+          src="images/banner-testimonials.svg"
+          alt="Client Success Stories"
+          class="img-fluid w-100"
+        />
+      </div>
+      <div class="banner-overlay">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold text-white mb-4">Success Stories</h1>
+              <p class="lead text-white mb-4">
+                Real stories from real clients who achieved their immigration
+                dreams with our help
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Stats Section -->
+      <section class="py-5 bg-primary text-white">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="stat-item-white">
+                <h2 class="display-4 fw-bold number-counter">500+</h2>
+                <p class="lead">Happy Clients</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-item-white">
+                <div class="d-flex justify-content-center">
+                  <h2 class="display-4 fw-bold number-counter">98</h2>
+                  <h2 class="display-4 fw-bold">%</h2>
+                </div>
+                <p class="lead">Success Rate</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-item-white">
+                <h2 class="display-4 fw-bold number-counter">50+</h2>
+                <p class="lead">Countries</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-item-white">
+                <h2 class="display-4 fw-bold number-counter">15+</h2>
+                <p class="lead">Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Testimonials -->
+      <section class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="lead">
+              Hear directly from those who have successfully achieved their
+              immigration goals
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="testimonial-card featured">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Priya Sharma</h6>
+                    <span class="text-muted">Software Engineer</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>
+                    "VSP Visa Consultant made my dream of moving to Canada a
+                    reality. Maria's expertise in Express Entry was exceptional.
+                    She guided me through every step, from improving my CRS
+                    score to preparing for the application. I received my ITA
+                    within 6 months!"
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-success"
+                      >Express Entry - Approved</span
+                    >
+                    <span class="text-muted">• January 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="testimonial-card featured">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>James Mitchell</h6>
+                    <span class="text-muted">Graduate Student</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>
+                    "David helped me secure admission to my dream university and
+                    navigate the student visa process. The scholarship guidance
+                    was invaluable - I received a 50% tuition waiver! The
+                    support continued even after I arrived in Canada."
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-info">Student Visa - Approved</span>
+                    <span class="text-muted">• September 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="testimonial-card featured">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Anna & Michael Weber</h6>
+                    <span class="text-muted">Couple - Family Sponsorship</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>
+                    "We thought family sponsorship would be impossible, but Visa
+                    Express proved us wrong. They handled the complex paperwork
+                    and helped us reunite with Michael's parents in Canada.
+                    Professional, compassionate, and results-driven!"
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-warning"
+                      >Family Sponsorship - Approved</span
+                    >
+                    <span class="text-muted">• March 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Testimonials -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Roberto Silva</h6>
+                    <span class="text-muted">Business Owner</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <p>
+                    "The startup visa program seemed overwhelming until I found
+                    VSP Visa Consultant. They connected me with the right
+                    investors and helped craft a compelling business plan. My
+                    tech startup is now thriving in Toronto!"
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-purple">Startup Visa - Approved</span>
+                    <span class="text-muted">• November 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Li Wei Chen</h6>
+                    <span class="text-muted">Healthcare Professional</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <p>
+                    "Sarah's expertise in work permits was exactly what I
+                    needed. The LMIA process was handled flawlessly, and I'm now
+                    working as a registered nurse in Vancouver. The attention to
+                    detail was impressive."
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-primary">Work Permit - Approved</span>
+                    <span class="text-muted">• December 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Emma Thompson</h6>
+                    <span class="text-muted">International Student</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <p>
+                    "From study permit to post-graduation work permit, Visa
+                    Express was with me every step of the way. They even helped
+                    me transition to permanent residence through the Canadian
+                    Experience Class. Highly recommended!"
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-secondary">PGWP → PR - Approved</span>
+                    <span class="text-muted">• February 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="client-avatar">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="client-info">
+                    <h6>Ahmed Hassan</h6>
+                    <span class="text-muted">Engineer</span>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <p>
+                    "The Provincial Nominee Program seemed complex, but Maria
+                    made it simple. She identified the best province for my
+                    profile and guided me through Ontario's nomination process.
+                    I'm now a permanent resident!"
+                  </p>
+                  <div class="testimonial-meta">
+                    <span class="badge bg-success">PNP - Approved</span>
+                    <span class="text-muted">• January 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Testimonials Section -->
+      <section class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Video Testimonials</h2>
+            <p class="lead">
+              Watch our clients share their immigration journey experiences
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="video-testimonial-card">
+                <div class="video-placeholder">
+                  <i class="fas fa-play-circle"></i>
+                  <div class="video-overlay">
+                    <h6>Priya's Express Entry Success</h6>
+                    <p>3:45 minutes</p>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h6>From India to Canada: A Software Engineer's Journey</h6>
+                  <p class="text-muted">
+                    Priya shares how VSP Visa Consultant helped her navigate the
+                    Express Entry process and achieve her Canadian dream.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="video-testimonial-card">
+                <div class="video-placeholder">
+                  <i class="fas fa-play-circle"></i>
+                  <div class="video-overlay">
+                    <h6>Family Reunion Success</h6>
+                    <p>4:12 minutes</p>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h6>Bringing Parents to Canada</h6>
+                  <p class="text-muted">
+                    The Weber family explains how family sponsorship helped them
+                    reunite with elderly parents in Canada.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="video-testimonial-card">
+                <div class="video-placeholder">
+                  <i class="fas fa-play-circle"></i>
+                  <div class="video-overlay">
+                    <h6>Student to Resident</h6>
+                    <p>5:23 minutes</p>
+                  </div>
+                </div>
+                <div class="video-info">
+                  <h6>From Student Visa to Permanent Residence</h6>
+                  <p class="text-muted">
+                    Emma's complete journey from international student to
+                    Canadian permanent resident with continuous support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews by Category -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Reviews by Service Category</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 mb-4">
+              <div class="category-review-card">
+                <div class="category-header">
+                  <i class="fas fa-passport"></i>
+                  <h5>Immigration</h5>
+                  <div class="rating-large">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-number">4.9/5</span>
+                  </div>
+                </div>
+                <p class="review-count">Based on 1,250+ reviews</p>
+                <div class="recent-review">
+                  <p class="small">
+                    "Outstanding service for Express Entry applications.
+                    Professional and thorough."
+                  </p>
+                  <span class="review-author">- Sarah K.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+              <div class="category-review-card">
+                <div class="category-header">
+                  <i class="fas fa-graduation-cap"></i>
+                  <h5>Study Abroad</h5>
+                  <div class="rating-large">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-number">4.8/5</span>
+                  </div>
+                </div>
+                <p class="review-count">Based on 850+ reviews</p>
+                <div class="recent-review">
+                  <p class="small">
+                    "Helped me get into my dream university with a scholarship.
+                    Amazing support!"
+                  </p>
+                  <span class="review-author">- Mike R.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+              <div class="category-review-card">
+                <div class="category-header">
+                  <i class="fas fa-briefcase"></i>
+                  <h5>Work Permits</h5>
+                  <div class="rating-large">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-number">4.9/5</span>
+                  </div>
+                </div>
+                <p class="review-count">Based on 650+ reviews</p>
+                <div class="recent-review">
+                  <p class="small">
+                    "LMIA process was handled perfectly. Now working in my dream
+                    job in Canada."
+                  </p>
+                  <span class="review-author">- Chen L.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+              <div class="category-review-card">
+                <div class="category-header">
+                  <i class="fas fa-users"></i>
+                  <h5>Family Sponsorship</h5>
+                  <div class="rating-large">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="rating-number">4.9/5</span>
+                  </div>
+                </div>
+                <p class="review-count">Based on 420+ reviews</p>
+                <div class="recent-review">
+                  <p class="small">
+                    "Reunited with my family thanks to their expert guidance.
+                    Highly emotional and professional service."
+                  </p>
+                  <span class="review-author">- Ana M.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="mb-4">Ready to Write Your Success Story?</h2>
+              <p class="lead mb-4">
+                Join thousands of satisfied clients who have achieved their
+                immigration goals with our expert guidance
+              </p>
+              <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-light btn-lg me-3"
+                  >Start Your Journey</a
+                >
+                <a href="services.html" class="btn btn-outline-light btn-lg"
+                  >View Our Services</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-globe-americas me-2"></i>VSP Visa Consultant
+            </h5>
+            <p>
+              Your trusted partner for immigration and visa consultation
+              services. We help make your dreams of studying, working, or living
+              abroad a reality.
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="company.html" class="text-white-50">Company</a></li>
+              <li>
+                <a href="services.html" class="text-white-50">Services</a>
+              </li>
+              <li>
+                <a href="testimonials.html" class="text-white-50"
+                  >Testimonials</a
+                >
+              </li>
+              <li><a href="blog.html" class="text-white-50">Blog</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="services.html#permanent-residence"
+                  class="text-white-50"
+                  >Permanent Residence</a
+                >
+              </li>
+              <li>
+                <a href="services.html#student-visa" class="text-white-50"
+                  >Student Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#work-permits" class="text-white-50"
+                  >Work Permits</a
+                >
+              </li>
+              <li>
+                <a href="services.html#visitor-visa" class="text-white-50"
+                  >Visitor Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#family-sponsorship" class="text-white-50"
+                  >Family Sponsorship</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h6 class="fw-bold mb-3">Contact Info</h6>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i>F4, Radha Kirtan
+                Complax, B/h. Architect Collage, ISKON - Raghuvir Road, Vallabh
+                Vidhyanagar - 388120, Anand (Guj.)
+              </p>
+              <p>
+                <i class="fas fa-phone me-2"></i
+                ><a
+                  href="tel:+919099008938 "
+                  class="text-decoration-none text-primary"
+                  >90990 08938
+                </a>
+                -
+                <a
+                  href="tel:+919725430242"
+                  class="text-decoration-none text-primary"
+                  >97254 30242
+                </a>
+              </p>
+              <p>
+                <i class="fas fa-envelope me-2"></i>
+                <a
+                  class="text-decoration-none text-primary"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vspvisa.com"
+                  target="_blank"
+                >
+                  info@vspvisa.com
+                </a>
+              </p>
+              <p><i class="fas fa-clock me-2"></i>Mon-Fri: 9AM-6PM</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2025 VSP Visa Consultant Consultants. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="#" class="text-white-50 me-3">Terms of Service</a>
+            <a href="#" class="text-white-50">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      VSP Visa Consultant Consultants - Your Trusted Immigration Partner
+    </title>
+    <meta
+      name="description"
+      content="Professional visa consultation services for immigration, study abroad, work permits, and citizenship applications."
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".service-card-home").forEach((card, i) => {
+          gsap.from(card, {
+            scrollTrigger: {
+              trigger: card,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.5,
+            delay: i * 0.1,
+            ease: "power2.out",
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Get all service cards
+        const cards = gsap.utils.toArray(".stat-item");
+
+        // Set initial positions (hidden)
+        cards.forEach((card, index) => {
+          let startX, startY;
+
+          switch (index) {
+            case 0: // Top-left card
+              startX = -100;
+              startY = -100;
+              break;
+            case 1: // Top-right card
+              startX = 100;
+              startY = -100;
+              break;
+            case 2: // Bottom-left card
+              startX = -100;
+              startY = 100;
+              break;
+            case 3: // Bottom-right card
+              startX = 100;
+              startY = 100;
+              break;
+          }
+
+          // Set initial state
+          gsap.set(card, {
+            x: startX,
+            y: startY,
+            opacity: 0,
+          });
+
+          // Create animation that STAYS after playing
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none none", // Only play once when entering
+              markers: false, // Set to true for debugging positions
+            },
+          });
+
+          tl.to(card, {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            delay: index * 0.1,
+            ease: "back.out(1.2)",
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img src="/images/logo.jpg" height="45" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="company.html"
+                id="companyDropdown"
+                role="button"
+              >
+                Company
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">About Us</h6>
+                      <a class="dropdown-item" href="company.html#about"
+                        >Our Story</a
+                      >
+                      <a class="dropdown-item" href="company.html#mission"
+                        >Mission & Vision</a
+                      >
+                      <a class="dropdown-item" href="company.html#values"
+                        >Our Values</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Team</h6>
+                      <a class="dropdown-item" href="company.html#team"
+                        >Our Experts</a
+                      >
+                      <a class="dropdown-item" href="company.html#advisors"
+                        >Advisory Board</a
+                      >
+                      <a class="dropdown-item" href="company.html#careers"
+                        >Careers</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Recognition</h6>
+                      <a class="dropdown-item" href="company.html#awards"
+                        >Awards</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="company.html#certifications"
+                        >Certifications</a
+                      >
+                      <a class="dropdown-item" href="company.html#partnerships"
+                        >Partnerships</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Immigration</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#permanent-residence"
+                        >Permanent Residence</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#family-sponsorship"
+                        >Family Sponsorship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#express-entry"
+                        >Express Entry</a
+                      >
+                      <a class="dropdown-item" href="services.html#pnp"
+                        >Provincial Nominee</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Study Abroad</h6>
+                      <a class="dropdown-item" href="services.html#student-visa"
+                        >Student Visa</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#university-admission"
+                        >University Admission</a
+                      >
+                      <a class="dropdown-item" href="services.html#scholarship"
+                        >Scholarship Guidance</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#post-graduation"
+                        >Post-Graduation Work</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Work Permits</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#temporary-work"
+                        >Temporary Work Permit</a
+                      >
+                      <a class="dropdown-item" href="services.html#lmia"
+                        >LMIA Services</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#intra-company"
+                        >Intra-Company Transfer</a
+                      >
+                      <a class="dropdown-item" href="services.html#startup-visa"
+                        >Startup Visa</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Other Services</h6>
+                      <a class="dropdown-item" href="services.html#visitor-visa"
+                        >Visitor Visa</a
+                      >
+                      <a class="dropdown-item" href="services.html#citizenship"
+                        >Citizenship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#document-preparation"
+                        >Document Preparation</a
+                      >
+                      <a class="dropdown-item" href="services.html#consultation"
+                        >Free Consultation</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+
+            <!-- Blog Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="blog.html"
+                id="blogDropdown"
+                role="button"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Immigration News</h6>
+                      <a class="dropdown-item" href="blog.html#policy-updates"
+                        >Policy Updates</a
+                      >
+                      <a class="dropdown-item" href="blog.html#new-programs"
+                        >New Programs</a
+                      >
+                      <a class="dropdown-item" href="blog.html#processing-times"
+                        >Processing Times</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Guides & Tips</h6>
+                      <a class="dropdown-item" href="blog.html#application-tips"
+                        >Application Tips</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#document-checklist"
+                        >Document Checklist</a
+                      >
+                      <a class="dropdown-item" href="blog.html#interview-prep"
+                        >Interview Preparation</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Success Stories</h6>
+                      <a class="dropdown-item" href="blog.html#case-studies"
+                        >Case Studies</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#client-experiences"
+                        >Client Experiences</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#video-testimonials"
+                        >Video Testimonials</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Crausol section -->
+    <div class="carousel-container">
+      <!-- Slide 1: Paris -->
+      <div class="slide active">
+        <div
+          class="slide-image"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        >
+          <div class="image-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number">01</div>
+          <div class="slide-location">France</div>
+          <h1 class="slide-title">Paris</h1>
+          <p class="slide-description">
+            The City of Light beckons with its timeless elegance, world-renowned
+            museums, and romantic boulevards. Experience the perfect blend of
+            history, culture, and sophistication in the heart of France.
+          </p>
+          <a href="#" class="slide-button">Plan Your Visit</a>
+        </div>
+      </div>
+
+      <!-- Slide 2: Tuscany -->
+      <div class="slide">
+        <div
+          class="slide-image"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1675970835839-261d62505450?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        >
+          <div class="image-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number">02</div>
+          <div class="slide-location">Italy</div>
+          <h1 class="slide-title">Tuscany</h1>
+          <p class="slide-description">
+            Rolling hills dotted with cypress trees, medieval towns, and
+            world-class vineyards create the perfect backdrop for an
+            unforgettable Italian escape. Discover the art of slow living in
+            this enchanting region.
+          </p>
+          <a href="#" class="slide-button">Explore Tuscany</a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Kyoto -->
+      <div class="slide">
+        <div
+          class="slide-image"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        >
+          <div class="image-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number">03</div>
+          <div class="slide-location">Japan</div>
+          <h1 class="slide-title">Kyoto</h1>
+          <p class="slide-description">
+            Ancient temples, traditional gardens, and preserved districts offer
+            a glimpse into Japan's rich cultural heritage. Walk through bamboo
+            groves and witness the beauty of changing seasons in this spiritual
+            sanctuary.
+          </p>
+          <a href="#" class="slide-button">Discover Kyoto</a>
+        </div>
+      </div>
+
+      <!-- Slide 4: Santorini -->
+      <div class="slide">
+        <div
+          class="slide-image"
+          style="
+            background-image: url('https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        >
+          <div class="image-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number">04</div>
+          <div class="slide-location">Greece</div>
+          <h1 class="slide-title">Santorini</h1>
+          <p class="slide-description">
+            Whitewashed villages perched on volcanic cliffs overlook the deep
+            blue Aegean Sea. Experience breathtaking sunsets, ancient history,
+            and the warm hospitality of the Greek islands.
+          </p>
+          <a href="#" class="slide-button">Visit Santorini</a>
+        </div>
+      </div>
+
+      <!-- Slide 5: Scottish Highlands -->
+      <div class="slide">
+        <div
+          class="slide-image"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1597202496047-8af47ddf05da?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          "
+        >
+          <div class="image-overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number">05</div>
+          <div class="slide-location">Scotland</div>
+          <h1 class="slide-title">Highlands</h1>
+          <p class="slide-description">
+            Dramatic landscapes of misty mountains, ancient castles, and
+            pristine lochs create a mystical atmosphere. Journey through legends
+            and folklore in one of Europe's last great wildernesses.
+          </p>
+          <a href="#" class="slide-button">Explore Scotland</a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <button class="navigation nav-prev" onclick="changeSlide(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="navigation nav-next" onclick="changeSlide(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots Navigation -->
+      <div class="dots-container">
+        <div class="dot active" onclick="currentSlide(1)"></div>
+        <div class="dot" onclick="currentSlide(2)"></div>
+        <div class="dot" onclick="currentSlide(3)"></div>
+        <div class="dot" onclick="currentSlide(4)"></div>
+        <div class="dot" onclick="currentSlide(5)"></div>
+      </div>
+
+      <!-- Slide Counter -->
+      <div class="slide-counter"><span class="current">01</span> / 05</div>
+    </div>
+    <!-- Banner Section -->
+    <!-- <section class="banner-section home-banner-section">
+      <div class="banner-image">
+        <img
+          src="images/banner-home.svg"
+          alt="Visa Consultation Services"
+          class="img-fluid w-100"
+        />
+      </div>
+      <div class="banner-overlay">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold text-white mb-4">
+                Your Trusted Immigration Partner
+              </h1>
+              <p class="lead text-white mb-4">
+                Expert visa consultation services to help you achieve your
+                immigration dreams with confidence and success.
+              </p>
+              <div class="banner-buttons">
+                <a href="services.html" class="btn btn-primary btn-lg me-3"
+                  >Our Services</a
+                >
+                <a href="contact.html" class="btn btn-outline-light btn-lg"
+                  >Free Consultation</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Services Overview -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="section-title">Our Expertise</h2>
+              <p class="lead">
+                Comprehensive immigration and visa services tailored to your
+                unique needs
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4" id="service-cards-container">
+            <div class="col-md-6 col-lg-3 service-card-home">
+              <div class="service-card h-100">
+                <div class="service-icon">
+                  <i class="fas fa-passport"></i>
+                </div>
+                <h5>Immigration</h5>
+                <p>
+                  Permanent residence, family sponsorship, and express entry
+                  programs
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 service-card-home">
+              <div class="service-card h-100">
+                <div class="service-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h5>Study Abroad</h5>
+                <p>
+                  Student visa applications and university admission guidance
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 service-card-home">
+              <div class="service-card h-100">
+                <div class="service-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h5>Work Permits</h5>
+                <p>Temporary work permits, LMIA, and intra-company transfers</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 service-card-home">
+              <div class="service-card h-100">
+                <div class="service-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <h5>Visitor Visa</h5>
+                <p>Tourist visa applications and travel documentation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h2 class="section-title">Why Choose VSP Visa Consultant?</h2>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class="fas fa-check-circle text-primary me-3"></i>
+                  <div>
+                    <h6>Experienced Professionals</h6>
+                    <p>Over 15 years of immigration law expertise</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <i class="fas fa-check-circle text-primary me-3"></i>
+                  <div>
+                    <h6>High Success Rate</h6>
+                    <p>
+                      98% application approval rate across all visa categories
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <i class="fas fa-check-circle text-primary me-3"></i>
+                  <div>
+                    <h6>Personalized Service</h6>
+                    <p>Tailored solutions for your unique immigration needs</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <i class="fas fa-check-circle text-primary me-3"></i>
+                  <div>
+                    <h6>24/7 Support</h6>
+                    <p>Round-the-clock assistance throughout your journey</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <h3 class="stat-number">5000+</h3>
+                  <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="stat-number">98%</h3>
+                  <p>Success Rate</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="stat-number">15+</h3>
+                  <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="stat-number">50+</h3>
+                  <p>Countries Served</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="mb-4">Ready to Start Your Immigration Journey?</h2>
+              <p class="lead mb-4">
+                Get expert guidance and personalized consultation for your visa
+                application
+              </p>
+              <a href="contact.html" class="btn btn-light btn-lg"
+                >Book Free Consultation</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-globe-americas me-2"></i>VSP Visa Consultant
+            </h5>
+            <p>
+              Your trusted partner for immigration and visa consultation
+              services. We help make your dreams of studying, working, or living
+              abroad a reality.
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="company.html" class="text-white-50">Company</a></li>
+              <li>
+                <a href="services.html" class="text-white-50">Services</a>
+              </li>
+              <li>
+                <a href="testimonials.html" class="text-white-50"
+                  >Testimonials</a
+                >
+              </li>
+              <li><a href="blog.html" class="text-white-50">Blog</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="services.html#permanent-residence"
+                  class="text-white-50"
+                  >Permanent Residence</a
+                >
+              </li>
+              <li>
+                <a href="services.html#student-visa" class="text-white-50"
+                  >Student Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#work-permits" class="text-white-50"
+                  >Work Permits</a
+                >
+              </li>
+              <li>
+                <a href="services.html#visitor-visa" class="text-white-50"
+                  >Visitor Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#family-sponsorship" class="text-white-50"
+                  >Family Sponsorship</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h6 class="fw-bold mb-3">Contact Info</h6>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i>F4, Radha Kirtan
+                Complax, B/h. Architect Collage, ISKON - Raghuvir Road, Vallabh
+                Vidhyanagar - 388120, Anand (Guj.)
+              </p>
+              <p>
+                <i class="fas fa-phone me-2"></i
+                ><a
+                  href="tel:+919099008938 "
+                  class="text-decoration-none text-primary"
+                  >90990 08938
+                </a>
+                -
+                <a
+                  href="tel:+919725430242"
+                  class="text-decoration-none text-primary"
+                  >97254 30242
+                </a>
+              </p>
+              <p>
+                <i class="fas fa-envelope me-2"></i
+                ><a
+                  class="text-decoration-none text-primary"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vspvisa.com"
+                  target="_blank"
+                >
+                  info@vspvisa.com
+                </a>
+              </p>
+              <p><i class="fas fa-clock me-2"></i>Mon-Fri: 9AM-6PM</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2025 VSP Visa Consultant Consultants. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="#" class="text-white-50 me-3">Terms of Service</a>
+            <a href="#" class="text-white-50">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

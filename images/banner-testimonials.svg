@@ -1,0 +1,254 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="testimonialsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8E44AD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ECF0F1;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F1C40F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F39C12;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="500" fill="url(#testimonialsBg)"/>
+  
+  <!-- Floating Quote Marks -->
+  <g fill="#FFFFFF" opacity="0.1">
+    <text x="100" y="120" font-family="serif" font-size="80" font-weight="bold">"</text>
+    <text x="1050" y="150" font-family="serif" font-size="80" font-weight="bold">"</text>
+    <text x="200" y="400" font-family="serif" font-size="60" font-weight="bold">"</text>
+    <text x="900" y="420" font-family="serif" font-size="60" font-weight="bold">"</text>
+  </g>
+  
+  <!-- Main Testimonial Cards -->
+  
+  <!-- Card 1 - Success Story -->
+  <g transform="translate(150,100)">
+    <rect x="0" y="0" width="280" height="180" fill="url(#cardGlow)" rx="15" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Client Avatar -->
+    <circle cx="40" cy="40" r="25" fill="#F39C12"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Arial" font-size="20" fill="#FFFFFF" font-weight="bold">P</text>
+    
+    <!-- Client Info -->
+    <text x="75" y="25" font-family="Arial" font-size="14" fill="#2C3E50" font-weight="bold">Priya Sharma</text>
+    <text x="75" y="40" font-family="Arial" font-size="11" fill="#7F8C8D">Software Engineer, India → Canada</text>
+    
+    <!-- Rating Stars -->
+    <g transform="translate(75,45)">
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(12,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(24,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(36,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(48,0) scale(0.8)"/>
+    </g>
+    
+    <!-- Quote -->
+    <text x="15" y="85" font-family="serif" font-size="24" fill="#9B59B6" opacity="0.6">"</text>
+    <text x="25" y="95" font-family="Arial" font-size="11" fill="#2C3E50">Maria's expertise in Express Entry was</text>
+    <text x="25" y="107" font-family="Arial" font-size="11" fill="#2C3E50">exceptional. She guided me through every</text>
+    <text x="25" y="119" font-family="Arial" font-size="11" fill="#2C3E50">step and I received my ITA within 6 months!</text>
+    
+    <!-- Badge -->
+    <rect x="200" y="20" width="70" height="20" fill="#27AE60" rx="10"/>
+    <text x="235" y="33" text-anchor="middle" font-family="Arial" font-size="9" fill="#FFFFFF" font-weight="bold">EXPRESS ENTRY</text>
+    
+    <!-- Success Icon -->
+    <circle cx="240" cy="150" r="15" fill="#27AE60"/>
+    <path d="M 233 150 L 237 154 L 247 144" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Card 2 - Family Reunion -->
+  <g transform="translate(470,100)">
+    <rect x="0" y="0" width="280" height="180" fill="url(#cardGlow)" rx="15" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Client Avatar -->
+    <circle cx="40" cy="40" r="25" fill="#E74C3C"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Arial" font-size="18" fill="#FFFFFF" font-weight="bold">AW</text>
+    
+    <!-- Client Info -->
+    <text x="75" y="25" font-family="Arial" font-size="14" fill="#2C3E50" font-weight="bold">Anna , Michael Weber</text>
+    <text x="75" y="40" font-family="Arial" font-size="11" fill="#7F8C8D">Family Sponsorship Success</text>
+    
+    <!-- Rating Stars -->
+    <g transform="translate(75,45)">
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(12,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(24,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(36,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(48,0) scale(0.8)"/>
+    </g>
+    
+    <!-- Quote -->
+    <text x="15" y="85" font-family="serif" font-size="24" fill="#9B59B6" opacity="0.6">"</text>
+    <text x="25" y="95" font-family="Arial" font-size="11" fill="#2C3E50">We thought family sponsorship would be</text>
+    <text x="25" y="107" font-family="Arial" font-size="11" fill="#2C3E50">impossible, but VSP Visa Consultant made it happen.</text>
+    <text x="25" y="119" font-family="Arial" font-size="11" fill="#2C3E50">Professional, compassionate, results-driven!</text>
+    
+    <!-- Badge -->
+    <rect x="190" y="20" width="80" height="20" fill="#E74C3C" rx="10"/>
+    <text x="230" y="33" text-anchor="middle" font-family="Arial" font-size="9" fill="#FFFFFF" font-weight="bold">FAMILY REUNION</text>
+    
+    <!-- Heart Icon -->
+    <path d="M 240 140 C 235 135, 225 135, 225 145 C 225 135, 215 135, 220 145 C 220 155, 240 165, 240 140" fill="#E74C3C"/>
+  </g>
+  
+  <!-- Card 3 - Student Success -->
+  <g transform="translate(790,100)">
+    <rect x="0" y="0" width="280" height="180" fill="url(#cardGlow)" rx="15" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Client Avatar -->
+    <circle cx="40" cy="40" r="25" fill="#3498DB"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Arial" font-size="20" fill="#FFFFFF" font-weight="bold">J</text>
+    
+    <!-- Client Info -->
+    <text x="75" y="25" font-family="Arial" font-size="14" fill="#2C3E50" font-weight="bold">James Mitchell</text>
+    <text x="75" y="40" font-family="Arial" font-size="11" fill="#7F8C8D">Graduate Student, UK → Canada</text>
+    
+    <!-- Rating Stars -->
+    <g transform="translate(75,45)">
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(12,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(24,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(36,0) scale(0.8)"/>
+      <polygon points="0,0 3,6 9,6 5,10 6,15 0,12 -6,15 -5,10 -9,6 -3,6" fill="url(#starGradient)" transform="translate(48,0) scale(0.8)"/>
+    </g>
+    
+    <!-- Quote -->
+    <text x="15" y="85" font-family="serif" font-size="24" fill="#9B59B6" opacity="0.6">"</text>
+    <text x="25" y="95" font-family="Arial" font-size="11" fill="#2C3E50">David helped me secure admission and</text>
+    <text x="25" y="107" font-family="Arial" font-size="11" fill="#2C3E50">navigate the visa process. I even received</text>
+    <text x="25" y="119" font-family="Arial" font-size="11" fill="#2C3E50">a 50% scholarship! Amazing support.</text>
+    
+    <!-- Badge -->
+    <rect x="200" y="20" width="70" height="20" fill="#3498DB" rx="10"/>
+    <text x="235" y="33" text-anchor="middle" font-family="Arial" font-size="9" fill="#FFFFFF" font-weight="bold">STUDENT VISA</text>
+    
+    <!-- Graduation Cap -->
+    <rect x="225" y="145" width="20" height="15" fill="#2C3E50" rx="2"/>
+    <polygon points="215,150 250,150 247,142 218,142" fill="#34495E"/>
+  </g>
+  
+  <!-- Statistics Section -->
+  <g transform="translate(200,320)">
+    <rect x="0" y="0" width="800" height="120" fill="#FFFFFF" opacity="0.1" rx="15"/>
+    
+    <!-- Stat 1 -->
+    <g transform="translate(100,30)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial" font-size="36" fill="#FFFFFF" font-weight="bold">5000+</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Happy Clients</text>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#FFFFFF" opacity="0.8">Success Stories</text>
+    </g>
+    
+    <!-- Stat 2 -->
+    <g transform="translate(300,30)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial" font-size="36" fill="#FFFFFF" font-weight="bold">98%</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Success Rate</text>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#FFFFFF" opacity="0.8">All Applications</text>
+    </g>
+    
+    <!-- Stat 3 -->
+    <g transform="translate(500,30)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial" font-size="36" fill="#FFFFFF" font-weight="bold">15+</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Years Experience</text>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#FFFFFF" opacity="0.8">Proven Track Record</text>
+    </g>
+    
+    <!-- Stat 4 -->
+    <g transform="translate(700,30)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial" font-size="36" fill="#FFFFFF" font-weight="bold">50+</text>
+      <text x="0" y="20" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Countries</text>
+      <text x="0" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#FFFFFF" opacity="0.8">Global Reach</text>
+    </g>
+  </g>
+  
+  <!-- Review Platforms -->
+  <g transform="translate(50,450)">
+    <!-- Google Reviews -->
+    <rect x="0" y="0" width="100" height="30" fill="#FFFFFF" opacity="0.9" rx="5"/>
+    <text x="8" y="15" font-family="Arial" font-size="10" fill="#4285F4" font-weight="bold">Google</text>
+    <text x="8" y="25" font-family="Arial" font-size="8" fill="#34495E">4.9 ★★★★★</text>
+    <text x="55" y="20" font-family="Arial" font-size="8" fill="#34495E">1,200+ reviews</text>
+  </g>
+  
+  <g transform="translate(180,450)">
+    <!-- Trustpilot -->
+    <rect x="0" y="0" width="100" height="30" fill="#FFFFFF" opacity="0.9" rx="5"/>
+    <text x="8" y="15" font-family="Arial" font-size="10" fill="#00B67A" font-weight="bold">Trustpilot</text>
+    <text x="8" y="25" font-family="Arial" font-size="8" fill="#34495E">4.8 ★★★★★</text>
+    <text x="55" y="20" font-family="Arial" font-size="8" fill="#34495E">850+ reviews</text>
+  </g>
+  
+  <g transform="translate(310,450)">
+    <!-- Facebook -->
+    <rect x="0" y="0" width="100" height="30" fill="#FFFFFF" opacity="0.9" rx="5"/>
+    <text x="8" y="15" font-family="Arial" font-size="10" fill="#1877F2" font-weight="bold">Facebook</text>
+    <text x="8" y="25" font-family="Arial" font-size="8" fill="#34495E">4.9 ★★★★★</text>
+    <text x="55" y="20" font-family="Arial" font-size="8" fill="#34495E">600+ reviews</text>
+  </g>
+  
+  <!-- Success Journey Path -->
+  <path d="M 100 50 Q 200 30 300 60 Q 500 40 700 80 Q 900 60 1100 90" 
+        stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.4" stroke-dasharray="10,5"/>
+  
+  <!-- Floating Success Icons -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <!-- Trophy -->
+    <g transform="translate(950,50)">
+      <ellipse cx="0" cy="30" rx="8" ry="4" fill="#F39C12"/>
+      <rect x="-5" y="20" width="10" height="10" fill="#F39C12"/>
+      <ellipse cx="0" cy="20" rx="7" ry="8" fill="#FFD700"/>
+      <rect x="-4" y="15" width="8" height="5" fill="#E67E22"/>
+      <text x="0" y="18" text-anchor="middle" font-family="Arial" font-size="6" fill="#8B4513" font-weight="bold">1</text>
+    </g>
+    
+    <!-- Medal -->
+    <g transform="translate(50,350)">
+      <circle cx="0" cy="0" r="10" fill="#F39C12"/>
+      <circle cx="0" cy="0" r="7" fill="#FFD700"/>
+      <polygon points="0,-5 -2,0 2,0" fill="#E67E22"/>
+      <rect x="-2" y="-15" width="1" height="10" fill="#E74C3C"/>
+      <rect x="1" y="-15" width="1" height="10" fill="#E74C3C"/>
+    </g>
+    
+    <!-- Achievement Stars -->
+    <polygon points="1150,350 1152,356 1158,356 1153,360 1155,366 1150,362 1145,366 1147,360 1142,356 1148,356" fill="#F1C40F"/>
+    <polygon points="1050,380 1052,386 1058,386 1053,390 1055,396 1050,392 1045,396 1047,390 1042,386 1048,386" fill="#F1C40F"/>
+  </g>
+  
+  <!-- Client Country Flags (simplified) -->
+  <g transform="translate(600,450)">
+    <!-- India -->
+    <rect x="0" y="0" width="20" height="12" fill="#FF9933"/>
+    <rect x="0" y="4" width="20" height="4" fill="#FFFFFF"/>
+    <rect x="0" y="8" width="20" height="4" fill="#138808"/>
+    <circle cx="10" cy="6" r="2" fill="#000080"/>
+    
+    <!-- UK -->
+    <rect x="30" y="0" width="20" height="12" fill="#012169"/>
+    <line x1="30" y1="0" x2="50" y2="12" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="50" y1="0" x2="30" y2="12" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="40" y1="0" x2="40" y2="12" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="30" y1="6" x2="50" y2="6" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Brazil -->
+    <rect x="60" y="0" width="20" height="12" fill="#009B3A"/>
+    <polygon points="70,2 75,6 70,10 65,6" fill="#FEDF00"/>
+    
+    <!-- Nigeria -->
+    <rect x="90" y="0" width="20" height="12" fill="#008751"/>
+    <rect x="90" y="4" width="20" height="4" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Trust Badges -->
+  <g transform="translate(1050,450)">
+    <rect x="0" y="0" width="40" height="25" fill="#FFFFFF" opacity="0.9" rx="3"/>
+    <text x="20" y="12" text-anchor="middle" font-family="Arial" font-size="8" fill="#0052CC" font-weight="bold">RCIC</text>
+    <text x="20" y="20" text-anchor="middle" font-family="Arial" font-size="6" fill="#34495E">Certified</text>
+  </g>
+</svg>

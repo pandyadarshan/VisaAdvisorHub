@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Our Company - VSP Visa Consultant Consultants</title>
+    <meta
+      name="description"
+      content="Learn about VSP Visa Consultant Consultants - our story, mission, values, and experienced team of immigration professionals."
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Get all service cards
+        const cards = gsap.utils.toArray(".story-item");
+
+        // Set initial positions (hidden)
+        cards.forEach((card, index) => {
+          let startX, startY;
+
+          switch (index) {
+            case 0: // Top-left card
+              startX = -100;
+              break;
+            case 1: // Top-right card
+              startX = 200;
+              break;
+          }
+
+          // Set initial state
+          gsap.set(card, {
+            x: startX,
+            y: startY,
+            opacity: 0,
+          });
+
+          // Create animation that STAYS after playing
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none none", // Only play once when entering
+              markers: false, // Set to true for debugging positions
+            },
+          });
+
+          tl.to(card, {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            delay: index * 0.1,
+            ease: "back.out(1.2)",
+          });
+        });
+      });
+
+      function animateOnScroll(className, animationProps, scrollTriggerProps) {
+        document.addEventListener("DOMContentLoaded", function () {
+          // Register GSAP plugins if needed
+          if (
+            typeof gsap !== "undefined" &&
+            typeof ScrollTrigger !== "undefined"
+          ) {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Default animation properties
+            const defaultAnimation = {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power2.out",
+              ...animationProps, // Merge with custom props
+            };
+
+            // Default ScrollTrigger properties
+            const defaultTrigger = {
+              trigger: `.${className}`,
+              start: "top 70%",
+              toggleActions: "play none none none",
+              ...scrollTriggerProps, // Merge with custom props
+            };
+
+            // Select all elements with the class
+            const elements = gsap.utils.toArray(`.${className}`);
+
+            elements.forEach((element) => {
+              // Set initial state
+              gsap.set(element, {
+                opacity: 0,
+                y: 20,
+                ...animationProps.from, // Set initial values if provided
+              });
+
+              // Create animation
+              gsap.to(element, {
+                ...defaultAnimation,
+                scrollTrigger: {
+                  ...defaultTrigger,
+                  trigger: element, // Ensure each element triggers individually
+                },
+              });
+            });
+          }
+        });
+      }
+      animateOnScroll("fade-from-bottom", {}, {});
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   gsap.registerPlugin(ScrollTrigger);
+
+      //   // Target the entire row container
+      //   const section = document.querySelector(".fade-from-bottom");
+
+      //   // Set initial state
+      //   gsap.set(section, { opacity: 0, y: 20 });
+
+      //   // Create fade-in animation
+      //   gsap.to(section, {
+      //     opacity: 1,
+      //     y: 0,
+      //     duration: 0.8,
+      //     ease: "power2.out",
+      //     scrollTrigger: {
+      //       trigger: section,
+      //       start: "top 70%",
+      //       toggleActions: "play none none none",
+      //     },
+      //   });
+      // });
+
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   gsap.registerPlugin(ScrollTrigger);
+
+      //   // Target the entire row container
+      //   const section = document.querySelector(".fade-from-bottom-p");
+
+      //   // Set initial state
+      //   gsap.set(section, { opacity: 0, y: 50 });
+
+      //   // Create fade-in animation
+      //   gsap.to(section, {
+      //     opacity: 1,
+      //     y: 0,
+      //     duration: 0.8,
+      //     ease: "power2.out",
+      //     scrollTrigger: {
+      //       trigger: section,
+      //       start: "top 70%",
+      //       toggleActions: "play none none none",
+      //     },
+      //   });
+      // });
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img src="/images/logo.jpg" height="45" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <!-- Company Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="company.html"
+                id="companyDropdown"
+                role="button"
+              >
+                Company
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">About Us</h6>
+                      <a class="dropdown-item" href="company.html#about"
+                        >Our Story</a
+                      >
+                      <a class="dropdown-item" href="company.html#mission"
+                        >Mission & Vision</a
+                      >
+                      <a class="dropdown-item" href="company.html#values"
+                        >Our Values</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Team</h6>
+                      <a class="dropdown-item" href="company.html#team"
+                        >Our Experts</a
+                      >
+                      <a class="dropdown-item" href="company.html#advisors"
+                        >Advisory Board</a
+                      >
+                      <a class="dropdown-item" href="company.html#careers"
+                        >Careers</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Recognition</h6>
+                      <a class="dropdown-item" href="company.html#awards"
+                        >Awards</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="company.html#certifications"
+                        >Certifications</a
+                      >
+                      <a class="dropdown-item" href="company.html#partnerships"
+                        >Partnerships</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Immigration</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#permanent-residence"
+                        >Permanent Residence</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#family-sponsorship"
+                        >Family Sponsorship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#express-entry"
+                        >Express Entry</a
+                      >
+                      <a class="dropdown-item" href="services.html#pnp"
+                        >Provincial Nominee</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Study Abroad</h6>
+                      <a class="dropdown-item" href="services.html#student-visa"
+                        >Student Visa</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#university-admission"
+                        >University Admission</a
+                      >
+                      <a class="dropdown-item" href="services.html#scholarship"
+                        >Scholarship Guidance</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#post-graduation"
+                        >Post-Graduation Work</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Work Permits</h6>
+                      <a
+                        class="dropdown-item"
+                        href="services.html#temporary-work"
+                        >Temporary Work Permit</a
+                      >
+                      <a class="dropdown-item" href="services.html#lmia"
+                        >LMIA Services</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#intra-company"
+                        >Intra-Company Transfer</a
+                      >
+                      <a class="dropdown-item" href="services.html#startup-visa"
+                        >Startup Visa</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header">Other Services</h6>
+                      <a class="dropdown-item" href="services.html#visitor-visa"
+                        >Visitor Visa</a
+                      >
+                      <a class="dropdown-item" href="services.html#citizenship"
+                        >Citizenship</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="services.html#document-preparation"
+                        >Document Preparation</a
+                      >
+                      <a class="dropdown-item" href="services.html#consultation"
+                        >Free Consultation</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="testimonials.html">Testimonials</a>
+            </li>
+
+            <!-- Blog Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="blog.html"
+                id="blogDropdown"
+                role="button"
+              >
+                Blog
+              </a>
+              <ul class="dropdown-menu mega-dropdown">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Immigration News</h6>
+                      <a class="dropdown-item" href="blog.html#policy-updates"
+                        >Policy Updates</a
+                      >
+                      <a class="dropdown-item" href="blog.html#new-programs"
+                        >New Programs</a
+                      >
+                      <a class="dropdown-item" href="blog.html#processing-times"
+                        >Processing Times</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Guides & Tips</h6>
+                      <a class="dropdown-item" href="blog.html#application-tips"
+                        >Application Tips</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#document-checklist"
+                        >Document Checklist</a
+                      >
+                      <a class="dropdown-item" href="blog.html#interview-prep"
+                        >Interview Preparation</a
+                      >
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="dropdown-header">Success Stories</h6>
+                      <a class="dropdown-item" href="blog.html#case-studies"
+                        >Case Studies</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#client-experiences"
+                        >Client Experiences</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="blog.html#video-testimonials"
+                        >Video Testimonials</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+      <div class="banner-image">
+        <img
+          src="images/banner-company.svg"
+          alt="About Our Company"
+          class="img-fluid w-100"
+        />
+      </div>
+      <div class="banner-overlay">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="display-4 fw-bold text-white mb-4">
+                About VSP Visa Consultant
+              </h1>
+              <p class="lead text-white mb-4">
+                Dedicated to excellence in immigration services since 2008
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Our Story Section -->
+      <section id="about" class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 story-item">
+              <h2 class="section-title">Our Story</h2>
+              <p class="lead">
+                Founded in 2008, VSP Visa Consultant Consultants began with a
+                simple mission: to make immigration accessible, transparent, and
+                successful for everyone.
+              </p>
+              <p>
+                What started as a small consulting firm has grown into one of
+                the most trusted immigration service providers, helping
+                thousands of individuals and families achieve their dreams of
+                living, working, and studying abroad.
+              </p>
+              <p>
+                Our founder, Maria Rodriguez, immigrated to Canada herself and
+                understood firsthand the challenges faced by newcomers. This
+                personal experience drives our commitment to providing
+                compassionate, expert guidance at every step of the immigration
+                journey.
+              </p>
+            </div>
+            <div class="col-lg-6 story-item">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-year">2008</div>
+                  <div class="timeline-content">
+                    <h6>Company Founded</h6>
+                    <p>Started with a vision to simplify immigration</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2012</div>
+                  <div class="timeline-content">
+                    <h6>1000+ Successful Cases</h6>
+                    <p>Reached our first major milestone</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2018</div>
+                  <div class="timeline-content">
+                    <h6>International Recognition</h6>
+                    <p>Awarded Best Immigration Consultant</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-year">2025</div>
+                  <div class="timeline-content">
+                    <h6>5000+ Happy Clients</h6>
+                    <p>Continuing to grow and serve</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Vision Section -->
+      <section id="mission" class="py-5 bg-light">
+        <div class="container">
+          <div class="row fade-from-bottom">
+            <div class="col-lg-6 mb-4">
+              <div class="mission-card">
+                <div class="mission-icon">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>
+                  To provide exceptional immigration and visa consultation
+                  services that empower individuals and families to pursue their
+                  dreams of living, working, and studying abroad. We are
+                  committed to delivering personalized, ethical, and
+                  results-driven solutions.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="mission-card">
+                <div class="mission-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>
+                  To be the world's most trusted immigration consulting firm,
+                  known for our integrity, expertise, and unwavering commitment
+                  to client success. We envision a world where geographical
+                  boundaries don't limit human potential.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Values Section -->
+      <section id="values" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="lead">The principles that guide everything we do</p>
+          </div>
+
+          <div class="row g-4 fade-from-bottom">
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h5>Integrity</h5>
+                <p>
+                  We maintain the highest ethical standards in all our
+                  interactions and never compromise on honesty and transparency.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h5>Excellence</h5>
+                <p>
+                  We strive for perfection in every application, staying updated
+                  with the latest immigration laws and procedures.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h5>Compassion</h5>
+                <p>
+                  We understand the emotional journey of immigration and provide
+                  supportive, caring guidance throughout the process.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h5>Diversity</h5>
+                <p>
+                  We celebrate cultural diversity and believe in creating
+                  inclusive opportunities for people from all backgrounds.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h5>Innovation</h5>
+                <p>
+                  We continuously improve our services and adopt new
+                  technologies to enhance the client experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <h5>Partnership</h5>
+                <p>
+                  We build long-term relationships with our clients, supporting
+                  them beyond their initial immigration goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section id="team" class="py-5 bg-light">
+        <div class="container fade-from-bottom">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <p class="lead">
+              Experienced professionals dedicated to your success
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="team-card">
+                <div class="team-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <h5>Maria Rodriguez</h5>
+                <p class="team-role">Founder & CEO</p>
+                <p>
+                  Regulated Canadian Immigration Consultant (RCIC) with over 15
+                  years of experience. Specializes in Express Entry and
+                  Provincial Nominee Programs.
+                </p>
+                <div class="team-credentials">
+                  <span class="badge bg-primary me-2">RCIC</span>
+                  <span class="badge bg-secondary">ICCRC Member</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-card">
+                <div class="team-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <h5>David Chen</h5>
+                <p class="team-role">Senior Immigration Consultant</p>
+                <p>
+                  Expert in student visa applications and study permit renewals.
+                  Holds advanced certifications in education consulting and
+                  immigration law.
+                </p>
+                <div class="team-credentials">
+                  <span class="badge bg-primary me-2">RCIC</span>
+                  <span class="badge bg-success">Education Specialist</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-card">
+                <div class="team-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <h5>Sarah Johnson</h5>
+                <p class="team-role">Work Permit Specialist</p>
+                <p>
+                  Focuses on LMIA applications, work permits, and employer
+                  compliance. Former government immigration officer with insider
+                  knowledge.
+                </p>
+                <div class="team-credentials">
+                  <span class="badge bg-primary me-2">RCIC</span>
+                  <span class="badge bg-warning">Ex-Government</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards & Recognition -->
+      <section id="awards" class="py-5">
+        <div class="container fade-from-bottom">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <p class="lead">
+              Recognized for our excellence in immigration services
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="award-card text-center">
+                <div class="award-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <h6>Best Immigration Consultant</h6>
+                <p class="text-muted">2023 - Immigration Excellence Awards</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="award-card text-center">
+                <div class="award-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <h6>Client Choice Award</h6>
+                <p class="text-muted">2022 - National Business Awards</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="award-card text-center">
+                <div class="award-icon">
+                  <i class="fas fa-medal"></i>
+                </div>
+                <h6>Outstanding Service</h6>
+                <p class="text-muted">2021 - Professional Services Council</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="award-card text-center">
+                <div class="award-icon">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <h6>Certified Excellence</h6>
+                <p class="text-muted">
+                  2020 - Immigration Consultants Association
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-globe-americas me-2"></i>VSP Visa Consultant
+            </h5>
+            <p>
+              Your trusted partner for immigration and visa consultation
+              services. We help make your dreams of studying, working, or living
+              abroad a reality.
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="company.html" class="text-white-50">Company</a></li>
+              <li>
+                <a href="services.html" class="text-white-50">Services</a>
+              </li>
+              <li>
+                <a href="testimonials.html" class="text-white-50"
+                  >Testimonials</a
+                >
+              </li>
+              <li><a href="blog.html" class="text-white-50">Blog</a></li>
+              <li><a href="contact.html" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="services.html#permanent-residence"
+                  class="text-white-50"
+                  >Permanent Residence</a
+                >
+              </li>
+              <li>
+                <a href="services.html#student-visa" class="text-white-50"
+                  >Student Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#work-permits" class="text-white-50"
+                  >Work Permits</a
+                >
+              </li>
+              <li>
+                <a href="services.html#visitor-visa" class="text-white-50"
+                  >Visitor Visa</a
+                >
+              </li>
+              <li>
+                <a href="services.html#family-sponsorship" class="text-white-50"
+                  >Family Sponsorship</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h6 class="fw-bold mb-3">Contact Info</h6>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i>F4, Radha Kirtan
+                Complax, B/h. Architect Collage, ISKON - Raghuvir Road, Vallabh
+                Vidhyanagar - 388120, Anand (Guj.)
+              </p>
+              <p>
+                <i class="fas fa-phone me-2"></i
+                ><a
+                  href="tel:+919099008938 "
+                  class="text-decoration-none text-primary"
+                  >90990 08938
+                </a>
+                -
+                <a
+                  href="tel:+919725430242"
+                  class="text-decoration-none text-primary"
+                  >97254 30242
+                </a>
+              </p>
+              <p>
+                <i class="fas fa-envelope me-2"></i
+                ><a
+                  class="text-decoration-none text-primary"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vspvisa.com"
+                  target="_blank"
+                >
+                  info@vspvisa.com
+                </a>
+              </p>
+              <p><i class="fas fa-clock me-2"></i>Mon-Fri: 9AM-6PM</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2025 VSP Visa Consultant Consultants. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="#" class="text-white-50 me-3">Terms of Service</a>
+            <a href="#" class="text-white-50">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
